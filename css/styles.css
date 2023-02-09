@@ -8,6 +8,8 @@
     --back-cloud: #F4F4FD;
     --cornflower: #E7E9FC;
     --outline-color: red;
+    --border-color: #8E8F99;
+    --active-icons: #31D0AA;
 
   }
 html {
@@ -189,6 +191,7 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+/*----------Section 1-------------*/
 .block-specifics {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -219,6 +222,19 @@ body {
     color: var(--text-slate);
     
 }
+.specifics-link {
+    width: 100%;
+    height: 112px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--back-cloud);
+}
+.specifics-icon {
+
+}
+/*----------Section 2-------------*/
 .photos {
     padding-top: 0;
 }
@@ -239,6 +255,7 @@ body {
     text-transform: capitalize;
     margin-bottom: 72px;
 }
+/*----------Section3-------------*/
 .team {
     background-color: var(--back-cloud);
     padding-top: 120px;
@@ -275,7 +292,80 @@ body {
     letter-spacing: 0.02em;
     color: var(--text-slate);
     text-align: center;
+    margin-bottom: 8px;
+    
 }
+/*-----------------------SVG Icons------------*/
+.team-soc-list {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    
+}
+.team-soc-item {
+    background: var(--logo-iris);
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.team-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.team-soc-icon {
+    fill: var(--cornflower);
+}
+.team-soc-link:is(:hover, :focus) {
+    background-color: var(--text-slate);
+}
+/*------------Section 4 Customers---------*/
+
+.customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.customers-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.customers-item {
+    width: calc((100% - 120px)/6);
+    height: 88px;
+}
+.customers-link {
+    padding: 16px 32px;
+    display: flex;
+    color: var(--border-color);
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+/*не працює fill на іконках ні в звичайному режимі ні в при ховері*/
+.customers-icon {
+    fill: var(--active-icons);
+}
+.customers-icon:is(:hover, :focus) {
+    fill: var(--active-ocean);
+}
+.customers-link:is(:hover, :focus) {
+    border-color: var(--active-ocean);
+    color: var(--active-ocean);
+}
+
+
+/*----------Footer-------------*/
 .page-footer {
     background-color: var(--main-navy);
     color: var(--cornflower);
